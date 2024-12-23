@@ -51,3 +51,10 @@ repos:
     hooks:
       - id: black
         args: [--preview]
+  - repo: https://github.com/htacg/tidy-html5
+    rev: 5.8.0
+    hooks:
+      - id: html-tidy
+        name: HTML Tidy
+        args: ["-quiet", "-modify", -config .tidyrc]
+        files: \.html$
